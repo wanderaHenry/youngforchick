@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+<body>
+<!-- This is the login page -->
+<form action="" id="login">
+  <label for="email">Enter email</label><br><br>
+  <input type="text" id="email" name="email" required><br><br>
+
+  <label for="password">Enter password</label><br><br>
+  <input type="password" id="password" name="password" required><br><br>
+
+  <button type="submit">Login</button>
+</form>
+
+
+  <script>
+  // capturethe form element by ID
+  const form = document.getElementById('login');
+
+  // Add event listener to handle form submission
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from automatic  submission 
+
+    // Get input values
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    if (email === '' && password === '') {
+      alert("Please enter your email and password.");
+    } else if (email === '') {
+      alert("Email is required.");
+    } else if (password === '') {
+      alert("Password is required.");
+    } else {
+      alert("Login submitted successfully!\nEmail: " + email);
+      // Proceed to send the data to server or further processing
+    }
+  });
+</script>
+
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+Is an urban brooder that is targeting youth between 18-30. It was founded by youth Member of Parliament
+to facilitate young urban dwellers to stimulate their wealthy creation and money economy involvement.
+Business
+Selling chicks on request; layers and broilers for both local and exotic chicks. The stock of the chicks is
+recorded and updated whenever new stock is ready by blooder manager.
+Each starter young farmer is supposed to receive 100 chicks only. Whereas returning farmers can take
+more chicks but not exceeding 500.
+Chicks’ prices are fixed at UGx. 1650 only irrespective of the type of the chicks and each farmer is
+eligible to 2 bags of feeds payable after 2 two months.
+Blooder Manager records chick stock and approves the requests for the chicks, once chicks are approved,
+then sales agents update registers it as a complete sale.
+Users
+Blooder Manager
+He records and updates chick stock, (number of the chicks, type of the chicks, period of the chicks in
+days, etc)
+Receives the request for chicks from young farmers and approves those requests. On approving the
+request, the stock number of chicks reduces.
+Sees all young farmers who have taken their chicks
+Sales Rep.
+These are the 3 individuals who are at the offices to attend to call-in requests (receives calls from young
+farmers for chicks and then record those requests).
+They also receive all requests and their updates from the manager
+
+Customer
+This is the youth between 20-30 years old in the constituency, they are registered with a recommender’s
+NIN number captured. (name of the youth, age, gender, recommender’s name, recommender NIN
+No.,youth NIN No. contact etc.)
+Requests for chicks. A young farmer is supposed to fill in a form requesting for the chicks once in 4
+months (name of the youth, number of chicks, type of chicks, type of the farmer (starter/returning),
+among other details are recorded.)
+Once submitted, they can keep follow up with their request online to see if it is approved by the brooder
+manager and ready for picking.
+Please note; only registered young farmer are eligible for chick request
+
+ As a refactored software engineer you are required to analyze, design and develop a software
+solution that the company can use in support of their business.
+ Ensure that validations, database designs, and interfaces are representing the operations described
+above.
+ HTML, python/Django, js/node, CSS/bootstrap technologies should be used as per your CSE
+track.
+
+
+
+.video-only {
+  margin-left: 100px;        /* Start 30px from the left */
+  width: 50vw;              /* Take half the screen width */
+}
+
+#introVid {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.video-description {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #1a1a1a;
+  background-color: #fff;
+  padding: 25px 30px;
+  margin: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+/* Drop cap styling for first paragraph */
+.video-description p::first-letter {
+  float: left;
+  font-size: 3em;
+  font-weight: bold;
+  color: #038d61;
+  line-height: 1;
+  padding-right: 8px;
+  margin-top: 4px;
+}
+
+/* Optional: Style strong/emphasis */
+.video-description strong {
+  color: #038d61;
+}
+
+.video-description em {
+  font-style: italic;
+}

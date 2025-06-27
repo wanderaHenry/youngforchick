@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div>
+    <label for="username">Enter User name</label>
+  <input type="text" id="username" placeholder="Type your name here...">
+</div>
+
+<button id="submittoLocal" onclick="submittoLocalStorage()">submit</button>
+<script>
+
+/*************  ✨ Windsurf Command ⭐  *************/
+/**
+ * Saves the username entered in the input field to local storage under the key "name".
+ * Displays an alert confirming that the name has been saved.
+ */
+
+
+  function submittoLocalStorage(){
+    const saveTolocal = document.getElementById("username").value;
+    localStorage.setItem("name", saveTolocal);
+    alert("name saved");
+  }
+</script>
+</body>
+</html>

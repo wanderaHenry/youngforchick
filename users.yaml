@@ -1,0 +1,35 @@
+**users**
+brooder  manager
+  signup
+    sign up form for  broader manager
+
+    
+  login
+    login form
+    dashboard for brooder manager
+
+  stock  management
+    view stock
+    form to add stock
+    approve sales/decline pending sale requests(dispatch)
+
+  manages sales repsenataives
+    register sales representatives
+    form to register sales representatives
+    view all sales representatives
+    delete  sales representatives
+
+  
+  receives requests and approves them
+
+
+sales agent
+customer/farmer 
+
+[hompepage]
+  [broodeer manager signup]//nav bar
+  [register as young farmer]//nav
+  [register as sales agent]
+  [login] redirects based on the user role
+  [contact us]
+  [about us]
