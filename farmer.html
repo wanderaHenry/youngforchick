@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmer Dashboard - Young4Chicks</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-kiwi-bird"></i>
+        <span>Young4Chicks</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#" id="logoutLink">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="dashboard-section">
+      <h2>Farmer Dashboard</h2>
+      <div class="dashboard-cards">
+        <div class="card">
+          <h3>My Requests</h3>
+          <div class="value" id="myRequests">0</div>
+          <div class="info">Last request: <span id="lastRequestDate">Never</span></div>
+        </div>
+        <div class="card">
+          <h3>Feed Due</h3>
+          <div class="value" id="feedDue">0</div>
+          <div class="info">Next payment: <span id="nextPaymentDate">-</span></div>
+        </div>
+      </div>
+
+      <div class="form-container">
+        <h3>Request Chicks</h3>
+        <form id="chickRequestForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="chickType">Chick Type</label>
+              <select id="chickType" required>
+                <option value="" disabled selected>Select type</option>
+                <option value="broiler">Broiler</option>
+                <option value="layer">Layer</option>
+                <option value="local">Local</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="farmerType">Farmer Type</label>
+              <select id="farmerType" required>
+                <option value="" disabled selected>Select type</option>
+                <option value="starter">Starter Farmer (max 100)</option>
+                <option value="returning">Returning Farmer (max 500)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="quantity">Number of Chicks</label>
+            <input type="number" id="quantity" min="1" max="100" required>
+            <small id="quantityHelp">Starter farmers can request up to 100 chicks</small>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="feedRequired" checked>
+            <label for="feedRequired">Request 2 bags of feed (payable after 2 months)</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Request</button>
+        </form>
+      </div>
+
+      <div class="table-container">
+        <h3>My Requests History</h3>
+        <table id="requestsTable">
+          <thead>
+            <tr>
+              <th>Request ID</th>
+              <th>Date</th>
+              <th>Chick Type</th>
+              <th>Quantity</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Filled by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Young4Chicks. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

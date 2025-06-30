@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brooder Manager - Young4Chicks</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <span>Young4Chicks</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#" id="bmDashboardLink" class="active">Dashboard</a>
+        <a href="#" id="approveRequestsLink">Approve Requests</a>
+        <a href="#" id="bmLogoutLink">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section id="bmDashboardSection">
+      <h2>Brooder Manager Dashboard</h2>
+      <div class="stats">
+        <div class="stat-card">
+          <h3><a href="#" id="pendingLink" style="text-decoration: none;">Pending Requests</a></h3>
+          <p id="pendingRequests">0</p>
+        </div>
+        
+        <div class="stat-card">
+          <h3>Approved Requests</h3>
+          <p id="approvedRequests">0</p>
+        </div>
+        <div class="stat-card">
+          <h3>Total Chicks Distributed</h3>
+          <p id="totalDistributed">0</p>
+        </div>
+      </div>
+
+      <h3>Current Inventory</h3>
+      <div class="table-container">
+        <table id="inventoryTable">
+          <thead>
+            <tr>
+              <th>Chick Type</th>
+              <th>Quantity</th>
+              <th>Vaccinated</th>
+              <th>Feed Bags</th>
+              <th>Last Updated</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Filled by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="approveRequestsSection" class="hidden">
+      <h2>Farmer Requests</h2>
+      <div class="table-container">
+        <table id="requestsTable">
+          <thead>
+            <tr>
+              <th>Farmer Name</th>
+              <th>Chick Type</th>
+              <th>Quantity</th>
+              <th>Farmer Type</th>
+              <th>Feed Requested</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Filled by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Young4Chicks. All rights reserved.</p>
+    </div>
+  </footer>
+
+ 
+  
+  <script src="brooder.js"></script>
+   <script src="script.js"></script>
+</body>
+</html>

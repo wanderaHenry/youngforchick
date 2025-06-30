@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Agent - Young4Chicks</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+     
+        <span>Young4Chicks</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#" id="dashboardLink" class="active">Dashboard</a>
+        <a href="inventory.html">Update Inventory</a>
+        <a href="#" id="logoutLink">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section id="dashboardSection">
+      <h2>Sales Agent Dashboard</h2>
+      <div class="stats">
+        <div class="stat-card">
+          <h3>Total Available Chicks</h3>
+          <p id="totalChicks">0</p>
+        </div>
+        <div class="stat-card">
+          <h3>Feed Bags Available</h3>
+          <p id="totalFeed">0</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="inventorySection" class="hidden">
+      <h2>Update Inventory</h2>
+      <form id="inventoryForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="broilers">Broilers</label>
+            <input type="number" id="broilers" min="0">
+          </div>
+          <div class="form-group">
+            <label for="layers">Layers</label>
+            <input type="number" id="layers" min="0">
+          </div>
+          <div class="form-group">
+            <label for="locals">Locals</label>
+            <input type="number" id="locals" min="0">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="feedBags">Feed Bags Available</label>
+          <input type="number" id="feedBags" min="0">
+        </div>
+        <div class="form-check">
+          <input type="checkbox" id="vaccinated">
+          <label for="vaccinated">Chicks are vaccinated</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Update Inventory</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Young4Chicks. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="salesagent.js"></script>
+</body>
+</html>

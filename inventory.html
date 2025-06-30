@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Update Inventory - Sales Agent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Sales Agent - Update Inventory</h1>
+
+  <form id="inventoryForm">
+    <label for="broilers">Broilers:</label>
+    <input type="number" id="broilers" min="0" required><br>
+
+    <label for="layers">Layers:</label>
+    <input type="number" id="layers" min="0" required><br>
+
+    <label for="locals">Locals:</label>
+    <input type="number" id="locals" min="0" required><br>
+
+    <label for="feedBags">Feed Bags:</label>
+    <input type="number" id="feedBags" min="0" required><br>
+
+    <label>
+      <input type="checkbox" id="vaccinated">
+      Vaccinated
+    </label><br><br>
+
+    <button type="submit">Update Inventory</button>
+  </form>
+
+  <h2>Inventory Records</h2>
+  <table border="1" id="inventoryTable">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Broilers</th>
+        <th>Layers</th>
+        <th>Locals</th>
+        <th>Feed Bags</th>
+        <th>Vaccinated</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Filled by JS -->
+    </tbody>
+  </table>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("inventoryForm");
+  const tableBody = document.querySelector("#inventoryTable tbody");
+
+  const loadInventory = () => {
+    const records = JSON.parse(localStorage.getItem("inventoryRecords") || "[]");
+    tableBody.innerHTML = "";
+    records.forEach(record => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${record.date}</td>
+        <td>${record.broilers}</td>
+        <td>${record.layers}</td>
+        <td>${record.locals}</td>
+        <td>${record.feedBags}</td>
+        <td>${record.vaccinated ? "Yes" : "No"}</td>
+      `;
+      tableBody.appendChild(row);
+    });
+  };
+
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    const newRecord = {
+      date: new Date().toLocaleString(),
+      broilers: +document.getElementById("broilers").value,
+      layers: +document.getElementById("layers").value,
+      locals: +document.getElementById("locals").value,
+      feedBags: +document.getElementById("feedBags").value,
+      vaccinated: document.getElementById("vaccinated").checked
+    };
+
+    const records = JSON.parse(localStorage.getItem("inventoryRecords") || "[]");
+    records.push(newRecord);
+    localStorage.setItem("inventoryRecords", JSON.stringify(records));
+    form.reset();
+    loadInventory();
+  });
+
+  loadInventory();
+});
+
+  </script>
+</body>
+</html>

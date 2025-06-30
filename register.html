@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - Young4Chicks</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo"><span>Young4Chicks</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="register.html" class="active">Register</a>
+        <a href="login.html">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="form-section">
+      <h2>Create Your Account</h2>
+      <form id="registrationForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" required>
+        </div>
+        <div class="form-group">
+          <label for="userType">Register As</label>
+          <select id="userType" required>
+            <option value="" disabled selected>Select user type</option>
+            <option value="farmer">Farmer</option>
+            <option value="salesAgent">Sales Agent</option>
+            <option value="brooderManager">Brooder Manager</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="nin">National ID Number (NIN)</label>
+          <input type="text" id="nin" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+      </form>
+
+      <div id="chickRequestSection" style="display:none; margin-top:40px;">
+        <h3>Request Chicks</h3>
+        <form id="chickRequestForm">
+          <div class="form-group">
+            <label for="quantity">Number of Chicks</label>
+            <input type="number" id="quantity" min="100" max="500" required>
+          </div>
+          <div class="form-group">
+            <label for="chickType">Type of Chicks</label>
+            <select id="chickType" required>
+              <option value="" disabled selected>Select chick type</option>
+              <option value="layers">Layers</option>
+              <option value="broilers">Broilers</option>
+              <option value="local">Local</option>
+              <option value="exotic">Exotic</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Request</button>
+        </form>
+
+        <h4>Chick Request History</h4>
+        <table border="1" width="100%" id="requestsTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Quantity</th>
+              <th>Type</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <p class="login-link">Already have an account? <a href="login.html">Login here</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Young4Chicks. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="regeister.js"></script>
+</body>
+</html>
